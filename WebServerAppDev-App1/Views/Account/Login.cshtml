@@ -1,5 +1,6 @@
-﻿@model WSAD_App1.Models.Account.AccountLoginViewModel
-@{
+﻿@model WebServerAppDev_App1.Models.Account.AccountLoginViewModel
+
+@{ 
     ViewBag.Title = "Login";
 }
 
@@ -9,14 +10,15 @@
     <lable>USERNAME: </lable>
     @Html.TextBoxFor(model => model.Username)<br />
 
+    @*<input type="text" name="username" />*@
     <label>PASSWORD: </label>
     @Html.PasswordFor(model => model.Password)<br />
 
-    <button type="submit">Login</button>
-    <a href="/Account/Create">Create Account</a><br />
+    @*<input type="password" name="password" /><br />*@
 
-    <label><small>Remember Me</small></label>
+    <label>Remember Me </label>
     @Html.CheckBoxFor(model => model.RememberMe)<br />
 
-
+    <button type="submit">Login</button>
+    <a href="/Account/Create">Create Account</a>
 </form>

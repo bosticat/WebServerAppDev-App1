@@ -1,4 +1,4 @@
-﻿namespace WSAD_App1.Models.Account
+﻿namespace WebServerAppDev_App1.Models.Account
 {
     public class AccountLoginViewModel
     {

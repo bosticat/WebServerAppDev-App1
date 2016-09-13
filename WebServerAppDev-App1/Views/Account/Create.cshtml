@@ -1,0 +1,54 @@
+﻿@model WebServerAppDev_App1.Models.Create.AccountCreateViewModel
+
+@{
+    ViewBag.Title = "Create Account";
+}
+
+<br />
+
+<form method="post" action="/Account/Create">
+    <fieldset>
+        <legend>New Account</legend>
+
+        <label>First Name:</label><br />
+        @Html.TextBoxFor(model => model.FirstName)
+        <br /><br />
+
+        <label>Last Name:</label><br />
+        @Html.TextBoxFor(model => model.LastName)
+        <br /><br />
+
+        <label>Email Address:</label><br />
+        @Html.TextBoxFor(model => model.EmailAddress)
+        <br /><br />
+
+        <label>Gender:</label><br />
+        <label>Male:</label>
+        @Html.RadioButtonFor(model => model.Gender, "Male")
+        <br />
+        <label>Female:</label>
+        @Html.RadioButtonFor(model => model.Gender, "Female")
+        <br /><br />
+
+        <label>Username:</label><br />
+        @Html.TextBoxFor(model => model.Username)
+        <br /><br />
+
+        <label>Password:</label><br />
+        @Html.PasswordFor(model => model.Password)
+        <br /><br />
+
+        <label>Confirm Password:</label><br />
+        @Html.PasswordFor(model => model.ConfirmPass)
+        <br /><br />
+
+        <label>
+            <small>Would you like to recieve our emails?</small>
+        </label>
+        @Html.CheckBoxFor(model => model.Email)
+        <br /><br />
+
+        <button type="submit">Submit New Account</button><br />
+
+    </fieldset>
+</form>
